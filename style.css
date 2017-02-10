@@ -1,0 +1,13 @@
+body {
+  background-image: url("background.png");
+  /*background-position: 0 100%*/
+  /*background-repeat: repeat;*/
+}
+
+.subheader {
+  margin-left: 500px;
+}
+ul.list li{
+  width: 21px;
+  float: left;
+}
