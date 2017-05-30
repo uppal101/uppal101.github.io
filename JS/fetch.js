@@ -8,12 +8,12 @@ window.onload = function(){
       return convertResponsesToJSONObjects(allTheMovieDbApiRequests)
     })
     .then(function(theMovieDbApiMovieNestedArray){
-      console.log(theMovieDbApiMovieNestedArray);
+      // console.log(theMovieDbApiMovieNestedArray);
       for (let j = 0; j < theMovieDbApiMovieNestedArray.length; j++) {
         let theMovieDbApiMovieNestedObject = theMovieDbApiMovieNestedArray[j];
         // console.log(theMovieDbApiMovieNestedObject);
         let theMovieDbApiMovieObject = theMovieDbApiMovieNestedObject.results[0];
-        console.log(theMovieDbApiMovieObject);
+        // console.log(theMovieDbApiMovieObject);
         if(theMovieDbApiMovieObject !== undefined) {
           createAndAppendMovieCards(theMovieDbApiMovieObject);
         }
@@ -154,11 +154,3 @@ window.onload = function(){
     },
     complete: function() { alert('Closed'); } // Callback for Modal close
   });
-
-
-    // will allow me to modify my movieDatabase to include poster and plot details
-    // let movieDetailsPromises = [];
-    // for (let title in movieDatabase) {
-    //   let p = movieDetails(title);
-    //   movieDetailsPromises.push(p)
-    // }
