@@ -22,7 +22,7 @@ window.onload = function(){
 }
 
   function getAllMoviesFromSFOpenData(){
-    let url = "https://data.sfgov.org/resource/wwmu-gmzc.json?$limit=40";
+    let url = "https://data.sfgov.org/resource/wwmu-gmzc.json?$limit=10";
     return fetch(url)
     .then(function(promiseResponse){
       return promiseResponse.json()
@@ -54,7 +54,7 @@ window.onload = function(){
   }
 
   function searchTheMovieDbApi(curMovie){
-    return fetch(`https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${curMovie.title}&page=1&include_adult=false  &year=${curMovie.year}`);
+    return fetch(`https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${curMovie.title}&page=1&include_adult=false&year=${curMovie.year}`);
   }
 
   function convertResponsesToJSONObjects(allTheMovieDbApiResult){
