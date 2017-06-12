@@ -22,7 +22,7 @@ window.onload = function(){
 }
 
   function getAllMoviesFromSFOpenData(){
-    let url = "https://data.sfgov.org/resource/wwmu-gmzc.json?$limit=150";
+    let url = "https://data.sfgov.org/resource/wwmu-gmzc.json?$limit=40";
     return fetch(url)
     .then(function(promiseResponse){
       return promiseResponse.json()
